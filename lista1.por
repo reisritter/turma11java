@@ -3,6 +3,15 @@ programa
 	inclua biblioteca Matematica --> mat
 	funcao inicio()
 	{
+		//Execucao de todas os procedimentos
+		//Cada procedimento é um exercício
+		ex1()
+		ex2()
+		ex3()
+		ex4()
+		ex5()
+		ex6()
+		ex7()
 		ex8()
 	}
 
@@ -52,19 +61,20 @@ programa
 	//   minutos e segundos.	
 	funcao ex3()
 	{
-		inteiro duracaoSeg
-		inteiro seg
-		inteiro min
-		inteiro hor
-		
+		//Variáveis
+		inteiro duracaoSeg,seg,min,hor
+		//Leitura 
 		leia(duracaoSeg)
-
+		//Cálculos
+		//Conversão de hora para segundo
 		hor = duracaoSeg / 3600
+		//Resto da divisão
 		duracaoSeg = duracaoSeg%3600
+		//Conversão de minuto para segundo
 		min = duracaoSeg / 60
-		duracaoSeg = duracaoSeg%60
-		seg = duracaoSeg
-
+		//Segundos
+		seg = duracaoSeg%60		
+		//Imprimir o resultado
 		escreva("\n",hor," ",min," ",seg)				
 	}
 
@@ -73,19 +83,15 @@ programa
 	//   , onde  R=(A+B)^2 e S=(B+C)^2
 	funcao ex4()
 	{
-		inteiro A
-		inteiro B
-		inteiro C
-		inteiro D
-		inteiro R
-		inteiro S
-
+		//Variáveis
+		inteiro A,B,C,D,R,S
+		//Leituras
 		leia(A,B,C)
-
+		//Cálculos
 		R=(A+B)^2 
 		S=(B+C)^2
 		D=(R+S)/2
-
+		//Imprimir o resultado
 		escreva("\nD: ",D)
 		
 	}
@@ -96,13 +102,14 @@ programa
 
 	funcao ex5()
 	{
+		//Variáveis
 		inteiro A,B,C
 		real media
-		
+		//Leituras
 		leia(A,B,C)
-
+		//Cálculo da média ponderada
 		media = ((A*0.2)+(B*0.3)+(C*0.5))
-		
+		//Impressão da média das notas
 		escreva(media)	
 	}
 
@@ -111,14 +118,14 @@ programa
 	//   D=((x2 - x1)^2 + (y2-y1)^2)^0.5
 	funcao ex6()
 	{
+		//Variáveis
 		inteiro x1,x2,y1,y2	
 		real d = 0.0
-		
+		//Leituras
 		leia(x1,y1,x2,y2)
-
-		d=((x2-x1)^2 + (y2-y1)^2) 
-		d = mat.raiz(d,2.0)
-
+		//Cálculo da distância entro dois pontos
+		d=mat.raiz((x2-x1)^2 + (y2-y1)^2,2.0) 		
+		//Impressão do distâncio
 		escreva(d)
 	}
 	
@@ -130,14 +137,15 @@ programa
 	//  calcula e mostra os valores de x e y. 
 	funcao ex7()
 	{
+		//Variáveis
 		inteiro a,b,c,d,E,f
 		real x,y
-		
+		//Leituras
 		leia(a,b,c,d,E,f)
-
+		//Cálculos de X e Y do Sistema Linear
 		x = (c*E - b*f)/(a*E - b*d)
 		y = (a*f - c*d)/(a*E - b*d)
-
+		//Impressão de X e Y
 		escreva("\nx = ",x," y = ",y,"\n")
 	}
 
@@ -147,12 +155,14 @@ programa
 	//   escrever um sistema que leia o custo de fábrica de um carro e escreva o custo ao consumidor. 
 	funcao ex8()
 	{
+		//Variáveis
 		real custoFab,custoCon
-
+		//Leitura
 		leia(custoFab)
-
+		//Cálculo do custo ao consumidor
+		//Custo de fabricação + percentual de impostos e do distribuidor
 		custoCon = custoFab + custoFab*0.28 + custoFab*0.45
-
+		//Impressão do custo ao consumidor
 		escreva(custoCon)
 	}
 }
@@ -163,7 +173,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1274; 
+ * @POSICAO-CURSOR = 1403; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
