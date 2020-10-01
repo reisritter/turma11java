@@ -4,6 +4,24 @@ programa
 	funcao inicio()
 	{
 		
+	}	
+
+	//Insere valores em uma matriz
+	funcao lerMatriz(inteiro L,inteiro C,inteiro M[][])
+	{
+		inteiro i,j
+		para(i=0;i<L;i++)
+			para(j=0;j<C;j++)
+				leia(M[i][j])	
+	}
+
+	//Imprime os valores de uma matriz
+	funcao escrevaMatriz(inteiro L,inteiro C,inteiro M[][])
+	{
+		inteiro i,j
+		para(i=0;i<L;i++)
+			para(j=0;j<C;j++)
+				escreva("\nM[",i,"][",j,"]= ",M[i][j])	
 	}
 
 	//1.Faça um programa que crie um vetor por leitura com 5 valores de 
@@ -52,16 +70,18 @@ programa
 	{
 		const inteiro L=4,C=6
 		inteiro i,j,N1[L][C],N2[L][C],M1[L][C],M2[L][C]
-		para(i=0;i<L;i++)
-			para(j=0;j<C;j++)
-				leia(N1[i][j],N2[i][j])
+		lerMatriz(L,C,N1)
+		lerMatriz(L,C,N2)
 
 		para(i=0;i<L;i++)
 			para(j=0;j<C;j++)			
 			{				
 				M1[i][j]=N1[i][j]+N2[i][j]
 				M2[i][j]=N1[i][j]-N2[i][j]
-			}		
+			}
+
+		escrevaMatriz(L,C,M1)
+		escrevaMatriz(L,C,M2)
 	}
 	//4.Crie um programa que receba valores do usuário para 
 	//preencher uma matriz 3X3, e em seguida, exiba a soma dos valores 
@@ -71,9 +91,7 @@ programa
 		const inteiro L=3,C=3
 		inteiro i,j,soma1=0,soma2=0,matriz[L][C]
 
-		para(i=0;i<L;i++)
-			para(j=0;j<C;j++)
-				leia(matriz[i][j])
+		lerMatriz(L,C,matriz)
 
 		para(i=0;i<L;i++)
 			para(j=0;j<C;j++)
@@ -85,13 +103,38 @@ programa
 		escreva(soma1," ",soma2)		
 	}
 
+	//Leia 2 vetores de 4 posições, um com os nomes dos alunos e o outro com as 
+	//respectivas notas. Depois imprima os vetores, marcando com um * os alunos com
+	//a maior nota!
+	funcao exercicioEd()
+	{
+		const inteiro C=4
+		inteiro i,j,N[C],maior=0,k
+		cadeia A[C]
+
+		para(i=0;i<C;i++)
+		{
+			leia(A[i])
+			leia(N[i])
+			se(N[i]>maior)			
+				maior=N[i]									
+		}
+
+		para(i=0;i<C;i++)
+			se(N[i]==maior)
+				A[i]+=" X"
+
+		para(i=0;i<C;i++)
+			escreva("\n ",A[i]," ",N[i])	
+		
+	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 35; 
+ * @POSICAO-CURSOR = 142; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
