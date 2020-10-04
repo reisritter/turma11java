@@ -1,19 +1,8 @@
 programa
-{
-
-	/*
-	
-
-
-
-
-6. Faça um programa que lê um vetor de 3 elementos e uma matriz de 3 x 3 elementos. Em seguida o programa deve fazer a multiplicação do vetor pelas colunas da matriz.
-
-	*/
-	
+{	
 	funcao inicio()
 	{
-		ex4()
+		
 	}
 
 	/*
@@ -131,6 +120,60 @@ programa
 	*/
 	funcao ex5()
 	{
+		const inteiro MAX = 5
+		real v1[MAX]
+		inteiro n,i
+
+		para(i=0;i<MAX;i++)
+			leia(v1[i])
+		leia(n)
+		escolha(n)
+		{
+			caso 0:
+			pare
+			caso 1:
+				para(i=0;i<MAX;i++)
+					escreva("\n ",v1[i])
+			pare
+			caso 2:
+				para(i=MAX-1;i>=0;i--)
+					escreva("\n ",v1[i])
+			pare
+			caso contrario:
+			escreva("Numero inválido!")
+		
+		}
+		
+	}
+
+	/*
+	6. Faça um programa que lê um vetor de 3 elementos e uma matriz de 3 x 3 elementos. 
+	Em seguida o programa deve fazer a multiplicação do vetor pelas colunas da matriz.
+	*/
+	funcao ex6()
+	{
+		const inteiro MAX = 3
+		inteiro v[MAX],m[MAX][MAX],i,j,res[MAX][MAX]
+		para(i=0;i<MAX;i++)		
+			para(j=0;j<MAX;j++)
+			{
+				escreva("m[",i,"][",j,"]= ")
+				leia(m[i][j])
+			}
+		para(i=0;i<MAX;i++)
+		{
+			escreva("v[",i,"]= ")
+			leia(v[i])
+		}
+
+		para(i=0;i<MAX;i++)		
+			para(j=0;j<MAX;j++)			
+				res[i][j]= v[i]*m[i][j]
+
+		
+		para(i=0;i<MAX;i++)		
+			para(j=0;j<MAX;j++)			
+				escreva("\n3res[",i,"][",j,"]= ",res[i][j])							
 		
 	}
 	
@@ -140,7 +183,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2822; 
+ * @POSICAO-CURSOR = 10; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
