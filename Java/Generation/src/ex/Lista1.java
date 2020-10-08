@@ -21,7 +21,7 @@ public class Lista1 {
 	
 	public double ex4(int a,int b,int c) 
 	{
-		return (((a+b)^2) + ((b+c)^2))/2;	
+		return (Math.pow((a+b),2) + Math.pow((b+c),2))/2;	
 	}
 	
 	public double ex5(double n1,double n2,double n3) 
@@ -31,7 +31,7 @@ public class Lista1 {
 	
 	public double ex6(int x1,int x2,int y1,int y2) 
 	{
-		return (((x2-x1)^2) + ((y2-y1)^2))^(1/2);
+		return Math.sqrt((Math.pow((x2-x1),2)) + (Math.pow((y2-y1),2)));
 	}
 	
 	public double [] ex7(int a,int b,int c,int d,int e,int f) 
