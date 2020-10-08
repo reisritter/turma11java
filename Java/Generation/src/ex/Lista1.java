@@ -1,5 +1,4 @@
 package ex;
-import java.util.Scanner;
 
 public class Lista1 {
 
@@ -20,4 +19,29 @@ public class Lista1 {
 		return tempo;
 	}
 	
+	public double ex4(int a,int b,int c) 
+	{
+		return (((a+b)^2) + ((b+c)^2))/2;	
+	}
+	
+	public double ex5(double n1,double n2,double n3) 
+	{
+		return 	((n1*0.2)+(n2*0.3)+(n3*0.5));
+	}
+	
+	public double ex6(int x1,int x2,int y1,int y2) 
+	{
+		return (((x2-x1)^2) + ((y2-y1)^2))^(1/2);
+	}
+	
+	public double [] ex7(int a,int b,int c,int d,int e,int f) 
+	{		
+		double res[]= {((c*e) - (b*f))/((a*e)-(b*d)),((a*f)-(c*d))/((a*e)-(b*d))};
+		return res;
+	}
+	
+	public double ex8(double cF) 
+	{
+		return cF+(cF*0.28)+(cF*0.45);	
+	}
 }
