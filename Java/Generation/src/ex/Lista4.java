@@ -31,6 +31,10 @@ public class Lista4 {
         • Os números ímpares digitados; 
         • A quantidade de números ímpares digitados.
     */
+    
+
+
+
 
     public void ex2()
     {
