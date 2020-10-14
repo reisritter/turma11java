@@ -84,13 +84,13 @@ public class Main_SadBoyStore {
 	
     public static void main(String[] args) throws InterruptedException {
         Scanner leia = new Scanner(System.in);
-        String nomeProduto[] = { "Camisa Social", "Calças", "Camisetas", "Tênis", "Sapatos", "Baby Look","Meias diversas", "Sapatilhas", "Bermudas", "Saias" };
+        String nomeProduto[] = { "Camisas AC/DC", "Calças Elvis", "Pulseira Disturbed", "Tênis Beatles", "Sapatos Blink 182", "Colar BEE GEES","Meias GreenDay", "Capuz Iron Maiden", "Botas Metallica", "Saias Bon Jovi" };
         // qtd de produto do estoque
         int qtdProduto[] = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
         // leitura do usuario do codigo de produto
         int codProd = 0;
         // Preço dos produtos
-        double precoProduto[] = { 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 };
+        double precoProduto[] = { 50.0, 80.0, 20.0, 60.0, 30.0, 16.0, 12.0, 87.0, 99.0, 23.0 };
         // Total do carrinho
         double totalCarrinho = 0.0;
         // Total do carrinho com desconto

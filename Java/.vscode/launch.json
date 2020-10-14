@@ -8,21 +8,9 @@
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "ex.Principal"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Principal<Generation>",
-            "request": "launch",
-            "mainClass": "ex.Principal",
-            "projectName": "Generation"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Main_teste<Generation>",
-            "request": "launch",
-            "mainClass": "teste.Main_teste",
-            "projectName": "Generation"
+            "mainClass": "${file}"
         }
+        
+       
     ]
 }
