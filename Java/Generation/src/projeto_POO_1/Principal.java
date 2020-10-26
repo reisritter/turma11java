@@ -69,18 +69,23 @@ public class Principal {
 					break;
 				case 3:
 					
-					String nome = l.next();		
-					if(!lista.isEmpty())
-						for(Funcionario f : lista)
-						{
-							
+					String nome = l.next();	
+					int a = -1;
+					if(!lista.isEmpty()) 
+					{
+						for(Funcionario f : lista)												
 							if(f.getNome().equalsIgnoreCase(nome))
 							{
-								System.out.println(lista.indexOf(f));
-								lista.remove(f);
+								a= lista.indexOf(f);
+								break;
 								
 							}
-						}
+						if(a>-1)
+							lista.remove(a);
+					}
+						
+					
+						
 										
 														
 			}
