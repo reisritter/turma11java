@@ -1,21 +1,17 @@
 package projeto_POO_1;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import utilidades.*;
 
 public class Principal {
-
-	
-	
+		
 	public static void main(String[] args) {
 		
 		Scanner l = new Scanner(System.in);
-		List<Funcionario> lista = new ArrayList<Funcionario>();
-		
-		int n;
+		List<Funcionario> lista = new ArrayList<Funcionario>();		
+		int n,a;
 		
 		do 
 		{			
@@ -70,19 +66,22 @@ public class Principal {
 				case 3:
 					
 					String nome = l.next();	
-					int a = -1;
+					a = -1;
 					if(!lista.isEmpty()) 
 					{
 						for(Funcionario f : lista)												
 							if(f.getNome().equalsIgnoreCase(nome))
 							{
 								a= lista.indexOf(f);
-								break;
-								
+								break;								
 							}
 						if(a>-1)
 							lista.remove(a);
+						else
+							System.out.println("");
 					}
+					else
+						System.out.println("");
 						
 					
 						
