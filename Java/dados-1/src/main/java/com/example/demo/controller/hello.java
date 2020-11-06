@@ -11,7 +11,8 @@ public class hello {
 	@GetMapping
 	public String hello()
 	{
-		return "Persistência!";
+		return "Teste";
 	}
+	
 
 }
