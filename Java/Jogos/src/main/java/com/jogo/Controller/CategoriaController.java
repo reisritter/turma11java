@@ -30,6 +30,12 @@ public class CategoriaController {
 		return ResponseEntity.ok(iCategoria.findAll());
 	}
 	
+	@GetMapping("/all")
+	public List<Categoria> getAllList()
+	{
+		return iCategoria.findAll();
+	}
+	
 	@GetMapping("/{nome}")
 	public ResponseEntity<List<Categoria>> getByNome(@PathVariable String nome)
 	{
